@@ -12,6 +12,16 @@ const createElement = (text) => {
   return todoElement;
 }
 
+const toggleLoader = () => {
+  const loaderHTML = document.querySelector('#loader');
+  const isHidden = loader.hasAttribute('hidden');
+  if (isHidden) {
+    loaderHTML.removeAttribute('hidden');
+  } else {
+    loaderHTML.setAttribute('hidden', '');
+  }
+}
+
 const dataContainer = document.querySelector('#data-container')
 
 const getTodos = () => {
