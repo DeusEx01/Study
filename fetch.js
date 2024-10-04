@@ -20,13 +20,14 @@ const toggleLoader = () => {
 const dataContainer = document.querySelector('#data-container')
 
 const getTodos = () => {
+  toggleLoader()
   const result = fetch(TODOS_URL, {
     method: 'GET' //by default GET, POST, DELETE
   })
   
   console.log("result", result)
-  
-  result
+  setTimeout(() => {
+    result
     .then((response) => {
       console.log(response)
       if (!response.ok) {
@@ -44,6 +45,11 @@ const getTodos = () => {
     .catch( error => {
       console.log(error)
     })
+    .finally(() => {
+      toggleLoader();
+    })
+  }, 3000) 
+  
   
 }
 
