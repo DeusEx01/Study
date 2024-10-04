@@ -8,7 +8,10 @@
 
 body {
     padding: 20px;
-}
+    background: linear-gradient(66deg, black, purple);
+    height: 100vh;
+    color: white;
+  }
 
 #data-container {
     counter-reset: li; 

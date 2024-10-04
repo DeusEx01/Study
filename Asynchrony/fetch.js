@@ -26,7 +26,7 @@ const getTodos = () => {
   })
   
   console.log("result", result)
-  setTimeout(() => {
+  setTimeout(() => { //imitating delay of loading from server
     result
     .then((response) => {
       console.log(response)
@@ -45,7 +45,7 @@ const getTodos = () => {
     .catch( error => {
       console.log(error)
     })
-    .finally(() => {
+    .finally(() => { //closing loader animation
       toggleLoader();
     })
   }, 3000) 
