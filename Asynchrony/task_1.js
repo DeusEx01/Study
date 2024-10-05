@@ -56,7 +56,7 @@ function addUserToList(userName) {
 
 function loader() {
   let loader = document.querySelector('#data-loader').hidden 
-  loader != loader;
+  loader.hidden = !loader.hidden;
 }
 const users_url = 'https://jsonplaceholder.typicode.com/users';
 
