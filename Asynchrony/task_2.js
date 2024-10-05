@@ -8,3 +8,29 @@ Template for user html-elements:
 For testing function user:
 getUsersByIds([5, 6, 2, 1])
 */
+import {loader} from './loader.js';
+import {createElement} from './createListElement.js';
+
+const USERS_LINK = "https://jsonplaceholder.typicode.com/users";
+let ids = [5, 6, 2, 1, 3, 4, 8];
+
+function getUsersById(ids) {
+  loader();
+  const requests = ids.map((id) => fetch(`${USERS_LINK}/${id}`));
+
+  Promise.all(requests)
+    .then((responses) => {
+      const results = responses.map((response) => response.json());
+      return Promise.all(results);
+    })
+    .then((users) => {
+      const dataContainer = document.querySelector('#data-container');
+      users.forEach( user => {
+        dataContainer.append(createElement(user.name));
+      })
+    })
+    .catch( error => console.log(error))
+    .finally( () => loader())
+}
+
+getUsersById(ids);

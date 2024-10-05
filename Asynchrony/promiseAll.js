@@ -16,25 +16,14 @@
 //   new Promise(), // fulfilled
 //   new Promise(), // fulfilled
 // ])//returns fulfilled
-
+import {loader} from './loader.js';
+import {createElement} from './createListElement.js';
 
 const TODOS_URL = 'https://jsonplaceholder.typicode.com/todos' //todos/id e.g. todos/32, todos/55 to get task with id == 32 or id == 55;
 const todosIds = [43, 10, 5, 100, 101];
 const dataContainer = document.querySelector('#data-container')
 
-const loader = function () {
-  let loader = document.querySelector("#data-loader");
-  loader.hidden = !loader.hidden;
-};
 
-const createElement = (text) => {
-  const todoElement = document.createElement('li');
-  const todoElementAnchor = document.createElement('a');
-  todoElementAnchor.href = '#';
-  todoElementAnchor.textContent = text;
-  todoElement.append(todoElementAnchor)
-  return todoElement;
-}
 
 const getTodosByIds = (ids) => {
   loader();

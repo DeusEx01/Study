@@ -44,20 +44,9 @@
 // getUsers();
 
 
-function addUserToList(userName) {
-  const userElement = document.createElement('li');
-  const userAnchor = document.createElement('a');
-  userAnchor.href = '#';
-  userAnchor.textContent = userName;
-  userElement.append(userAnchor);
+import {loader} from './loader.js';
+import {createElement as addUserToList} from './createListElement.js';
 
-  return userElement;
-}
-
-function loader() {
-  let loader = document.querySelector('#data-loader').hidden 
-  loader.hidden = !loader.hidden;
-}
 const users_url = 'https://jsonplaceholder.typicode.com/users';
 
 function getUsersList() {
