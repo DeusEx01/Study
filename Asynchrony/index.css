@@ -8,6 +8,7 @@
     --text-color: #444;
     --circle-background: #cc5cf2;
     --border-color: #ffffff;
+    --default-image-size: 200px;
 }
 
 body {
@@ -75,4 +76,18 @@ body {
     border-radius: 5px;
     text-decoration: none;
     color: white;
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+
+    max-width: var(--default-image-size);
+}
+
+.photo-item__image {
+    width: var(--default-image-size);
+    height: var(--default-image-size);
 }
