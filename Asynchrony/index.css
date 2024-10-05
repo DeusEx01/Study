@@ -1,3 +1,7 @@
+* {
+    list-style: none;
+    box-sizing: border-box;
+}
 :root {
     --text-shadow-color: rgba(255, 255, 255, 0.5);
     --link-background: #DAD2CA;
@@ -57,4 +61,18 @@ body {
     font-weight: bold;
     border-radius: 2em;
     transition: all .3s ease-out;
+}
+.menu {
+    display: flex;
+}
+.menu-link {
+    display: block;
+    background-color: grey;
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
 }
