@@ -21,7 +21,8 @@ const getUsers = () => {
   loader();
   let result = fetch(USERS_URL, { method: "GET" });
 
-  result
+  setTimeout( () => {
+    result
     .then((response) => {
       let users = response.json();
       return users;
@@ -37,6 +38,7 @@ const getUsers = () => {
     .finally(() => {
       loader();
     })
+  }, 3000)
 };
 
 getUsers();
