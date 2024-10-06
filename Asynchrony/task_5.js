@@ -69,3 +69,25 @@ const getTodosById = async (ids) => {
 }
 await createNewPost()
 await getTodosById([43, 21, 55, 100, 10]);
+//Task 7
+import {createElement} from './createListElement.js'
+import {loader} from './loader.js'
+
+const ALBUMS_URL = 'https://jsonplaceholder.typicode.com/albums'
+const dataContainer = document.querySelector('#data-container');
+async function renderAlbums() {
+  loader()
+  try {
+    const response = await fetch(ALBUMS_URL);
+    const albumResults = await response.json();
+    albumResults.forEach( album => dataContainer.append(createElement(album.title)))
+
+  } catch(error) {
+    dataContainer.innerText = 'An error occurred in obtaining album data...';
+  } finally {
+    loader()
+  }
+  
+}
+
+renderAlbums()
