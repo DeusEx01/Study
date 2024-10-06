@@ -13,9 +13,7 @@
 
 body {
     padding: 20px;
-    background: linear-gradient(66deg, black, purple);
     height: 100vh;
-    color: white;
   }
 
 #data-container {
@@ -98,14 +96,23 @@ body {
 .post__title {
     font-size: 45px;
 }
+
+.post__comments {
+    max-width: 400px;
+}
+
 .post__comments-text {
+    display: block;
+    border-bottom: 1px solid white;
     font-weight: bold;
     font-size: 25px;
+    margin-bottom: 15px;
 }
 
 .post-comment {
     display: flex;
     flex-flow: column;
+    margin-bottom: 10px;
 }
 
 .post-comment__author {

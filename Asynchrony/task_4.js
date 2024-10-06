@@ -1,4 +1,27 @@
 import {addNewPost} from './createListElement.js'
+import {addCommentsToPost} from './createListElement.js'
+
+const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts'
+const COMMENTS_URL = 'https://jsonplaceholder.typicode.com/comments'
 
 const posts = document.querySelector('#posts');
-posts.append(addNewPost('How to tame a dragon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Stupid post', 'NoName'));
+
+function renderPost(postId) {
+  fetch(`${POSTS_URL}/${postId}`)
+    .then(result => result.json())
+    .then(post => {
+      posts.append(addNewPost(`${post.title}`, post.body))
+      fetch(`${COMMENTS_URL}?postId=${postId}`)
+        .then( comments => {
+          return comments.json();
+        })
+        .then( comments => {
+          console.log(comments)
+          addCommentsToPost(comments)
+        })
+    })
+    
+    
+}
+
+renderPost(26)
