@@ -25,3 +25,32 @@ export function createImageElement(text, src) {
 
   return newElement;
 }
+
+export function addNewPost(title, text, comment, author) {
+  function newElement(elem, cl, elementToAppend) {
+    let element = document.createElement(elem)
+    element.classList.add(cl);
+    elementToAppend.append(element)
+    return element;
+  }
+
+  const post = newElement('div', 'post', posts)
+  post.classList.add('post')
+  post.id = 'post';
+  const postTitle = newElement('h1', 'post__title', post)
+  const postText = newElement('p', 'post__text', post)
+  const postCommentsText = newElement('b', 'post__comments-text', post);
+  const postComments = newElement('div', 'post__comments', post)
+    const postComment = newElement('div', 'post-comment', postComments);
+      const postCommentText = newElement('span', 'post-comment__text', postComment);
+      const postCommentAuthor = newElement('span', 'post-comment__author', postComment);
+  
+  postTitle.textContent = title;
+  postText.textContent = text;
+  postCommentsText.textContent = 'Comments';
+  postCommentAuthor.textContent = author;
+  postCommentText.textContent = comment;
+
+  return post;
+  
+}

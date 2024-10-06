@@ -91,3 +91,23 @@ body {
     width: var(--default-image-size);
     height: var(--default-image-size);
 }
+
+.post {
+    max-width: 700px;
+}
+.post__title {
+    font-size: 45px;
+}
+.post__comments-text {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.post-comment {
+    display: flex;
+    flex-flow: column;
+}
+
+.post-comment__author {
+    font-style: italic;
+}
