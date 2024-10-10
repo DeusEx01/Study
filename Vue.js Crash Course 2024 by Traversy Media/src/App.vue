@@ -1,3 +1,9 @@
+<script setup>
+import NavBar from '@/components/NavBar.vue';
+
+
+
+</script>
 <template>
-  <h1>Vue Course</h1>
+  <NavBar />
 </template>
