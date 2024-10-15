@@ -5,7 +5,6 @@ import { ref, computed } from 'vue';
 const props = defineProps({
   job: Object 
 })
-
 const showFullDescription = ref(false);
 
 const toggleFullDescription = () => {
