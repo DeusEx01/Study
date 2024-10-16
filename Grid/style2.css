@@ -1,0 +1,134 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+  background-color: rgb(194, 194, 194);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.link {
+  transition: .5s color;
+  color: black;
+}
+
+.link:hover {
+  color: rgb(255, 181, 45);
+}
+
+.link:active {
+  color: rgb(255, 142, 0);
+}
+.icon-link svg path {
+  transition: .5s fill;
+}
+.icon-link:hover svg path {
+  fill: rgb(255, 181, 45);
+}
+
+.icon-link:active svg path {
+  fill: rgb(219, 142, 0);
+}
+
+.btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: .5s background-color;
+}
+
+.btn:hover {
+  background-color: rgb(255, 181, 45);
+}
+
+.btn:active {
+  background-color: rgb(219, 142, 0);
+}
+
+.text-field {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: .5s background-color;
+
+}
+
+.text-field:hover {
+  background-color: rgb(60, 60, 60);
+}
+
+.text-field:active {
+  background-color: rgb(41, 41, 41);
+}
+.text-field:focus {
+  background-color: rgb(22, 22, 22);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  margin-top: 50px;
+} */
+/*
+1fr, auto, minmax(min_px, max_px), min-content (minimum space needed for content) & max-content
+repeat(count_of_columns, size for each column)
+justify-items - for rows
+align-items - for columns
+
+align-self - columns for individual item
+justify-self - rows for individual item
+*/
+/* .element {
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  border-radius: 10px;
+} */
