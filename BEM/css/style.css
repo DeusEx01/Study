@@ -18,8 +18,7 @@ body {
     padding: 40px;
     background-color: #F1F1F1;
 }
-
-/* Кнопка */
+/* Button */
 .btn {
     border: none;
     outline: none;
@@ -27,35 +26,37 @@ body {
     background-color: #3BCA09;
     color: white;
     padding: 13px 20px;
-    transition: background-color .3s;
+    transition: background-color .2s linear;
 }
 
 .btn:hover {
-    background-color: #66ec36;
+    background-color: #4ee716;
+    cursor: pointer;
+    transition: .2s linear;
 }
-
 .btn:active {
-    background-color: #2fa803;
+    background-color: #4ee716;
+    cursor: pointer;
 }
-
 .btn:focus {
-    outline: 1px solid #3BCA09;
+    outline: 1px solid #5fe62e;
     outline-offset: 3px;
 }
 
-/* Рейтинг */
+
+/* Rating */
 .rating {
     display: flex;
 }
 
 .rating__star:not(:last-child) {
-   margin-right: 5px; 
+    margin-right: 6px;
 }
 
-/* Карточка */
+/* Card */
 .card {
     width: 374px;
-    min-width: 440px;
+    min-height: 440px;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
@@ -73,6 +74,7 @@ body {
 }
 
 .card__price-rating {
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -83,7 +85,7 @@ body {
     font-weight: 700;
 }
 
-.card__rating{
+.card__rating {
     margin-left: 20px;
 }
 
@@ -94,7 +96,7 @@ body {
 }
 
 .card__location {
-    display: block;
+    display: block ;
     margin-bottom: 18px;
     font-size: 16px;
     color: #999;
