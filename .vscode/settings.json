@@ -15,7 +15,8 @@
     "package.json": true,
     "README.md": true,
     "eslint.config.mjs": true,
-    "Grid/.vscode": true
+    "Grid/.vscode": true,
+    "Grid": true
   },
   "hide-files.files": [
     ".vscode",
@@ -27,6 +28,7 @@
     "package.json",
     "README.md",
     "eslint.config.mjs",
-    "Grid/.vscode"
+    "Grid/.vscode",
+    "Grid"
   ]
 }
