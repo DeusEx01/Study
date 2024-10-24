@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Analytics</title>
-  </head>
-  <body class="container">
-    <section class="intro-analytics">
-      <div class="wrap">
-        <header class="header">
-          <a href="" class="header__logo">
-            <img src="assets/icons/logo.svg" alt="">
-            <img src="assets/icons/ANALYTICS.svg" alt="">
-            
-          </a>
-            <nav class="header__menu">
-              <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="#">Products</a></li>
-                <li class="header__menu-item"><a href="#">Pricing</a></li>
-                <li class="header__menu-item"><a href="#">FAQ</a></li>
-                <li class="header__menu-item"><a href="#">Blog</a></li>
-                <li class="header__menu-item"><a href="#">Analytics</a></li>
-              </ul>
-            </nav>
-            <div class="header__btns">
-              <button class="header__btn header__btn--transparent">Sign in</button>
-              <button class="header__btn header__btn--circled">Sign Up</button>
-            </div>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Positivus</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner container">
+      <a href="#" class="header__logo logo">
+        <img 
+        src="./images/logo.svg" 
+        alt="Positivus" 
+        class="logo__image"
+        width="220"
+        height="36"
+        loading="lazy"
+        >
+      </a>
+      <nav class="header__menu hidden-mobile">
+        <ul class="header__menu-list">
+          <li class="header__menu-item"><a href="" class="header__menu-link">About us</a></li>
+          <li class="header__menu-item"><a href="" class="header__menu-link">Services</a></li>
+          <li class="header__menu-item"><a href="" class="header__menu-link">Use Cases</a></li>
+          <li class="header__menu-item"><a href="" class="header__menu-link">Pricing</a></li>
+          <li class="header__menu-item"><a href="" class="header__menu-link">Blog</a></li>
+        </ul>
+      </nav>
+      <button class="header__button button button--transparent hidden-mobile" type="button">Request a quote</button>
+      <button class="header__burger-button burger-button visible-mobile">
+        <span class="visually-hidden">Open navigation menu</span>
+      </button>
+    </div>
+  </header>
 
-        <div class="dashboard">
-          <div class="dashboard__info">
-            <h1 class="dashboard__info-title">Monitor your business on real-time dashboard</h1>
-            <p class="dashboard__info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. </p>
-            <button class="dashboard__info-btn">Try for free</button>
-          </div>
-          <div class="dashboard__pictures">
-            <img src="/assets/img/dashboard-small.png" alt="dashboard picture">
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </body>
+  <dialog class="mobile-overlay visible-mobile" id="mobileOverlay" open>MENU</dialog>
+  <!-- 33:00 -->
+</body>
 </html>
