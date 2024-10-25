@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge">
   <link rel="stylesheet" href="./styles/styles.css">
   <title>Positivus</title>
 </head>
@@ -29,14 +33,144 @@
           <li class="header__menu-item"><a href="" class="header__menu-link">Blog</a></li>
         </ul>
       </nav>
-      <button class="header__button button button--transparent hidden-mobile" type="button">Request a quote</button>
-      <button class="header__burger-button burger-button visible-mobile">
+      <button
+        class="header__button button button--transparent hidden-mobile"
+        type="button">
+        Request a quote
+      </button>
+      <button 
+        class="header__burger-button burger-button visible-mobile"
+        type="button"
+        onclick="mobileOverlay.showModal()"
+        >
         <span class="visually-hidden">Open navigation menu</span>
       </button>
     </div>
   </header>
 
-  <dialog class="mobile-overlay visible-mobile" id="mobileOverlay" open>MENU</dialog>
-  <!-- 33:00 -->
+  <main class="content">
+    <section class="section container">
+      <div class="section__body">
+        <div class="hero">
+          <div class="hero__main">
+            <div class="hero__body">
+              <h1 class="hero__title">Navigating the digital landscape for success</h1>
+              <div class="hero__description">
+                <p>Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+              </div>
+              <button
+                class="hero__button button"
+                type="button"
+                >
+                Book a consultation
+              </button>
+            </div>
+            <img
+              src="images/hero-bg.svg"
+              alt=""
+              class="hero__image"
+              width="600"
+              height="515"
+              >
+          </div>
+          <div class="hero__partners">
+            <h2 class="visually-hidden">Our partners</h2>
+            <ul class="hero__partners-list">
+              <li class="hero__partners-item">
+                <img
+                  class="hero__partners-image"
+                  src="./images/partners/amazon.svg"
+                  alt="Amazon"
+                  width="130px"
+                  height="48px"
+                  loading="lazy"
+                  >
+              </li>
+              <li class="hero__partners-item">
+                <img
+                  class="hero__partners-image"
+                  src="./images/partners/dribbble.svg"
+                  alt="Dribbble"
+                  width="130px"
+                  height="48px"
+                  loading="lazy"
+                  >
+              </li>
+              <li class="hero__partners-item">
+                <img
+                  class="hero__partners-image"
+                  src="./images/partners/hubspot.svg"
+                  alt="Hubspot"
+                  width="130px"
+                  height="48px"
+                  loading="lazy"
+                  >
+              </li>
+              <li class="hero__partners-item">
+                <img
+                  class="hero__partners-image"
+                  src="./images/partners/notion.svg"
+                  alt="Notion"
+                  width="130px"
+                  height="48px"
+                  loading="lazy"
+                  >
+              </li>
+              <li class="hero__partners-item">
+                <img
+                  class="hero__partners-image"
+                  src="./images/partners/netflix.svg"
+                  alt="Netflix"
+                  width="130px"
+                  height="48px"
+                  loading="lazy"
+                  >
+              </li>
+              <li class="hero__partners-item">
+                <img
+                  class="hero__partners-image"
+                  src="./images/partners/zoom.svg"
+                  alt="Zoom"
+                  width="130px"
+                  height="48px"
+                  loading="lazy"
+                  >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+    <form class="mobile-overlay__close-button-wrapper" method="dialog">
+      <button 
+        class="mobile-overlay__close-button cross-button"
+        type="submit"
+      >
+        <span class="visually-hidden">Close navigation menu</span>
+      </button>
+    </form>
+    <div class="mobile-overlay__body">
+      <ul class="mobile-overlay__list">
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link">About us</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link">Services</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link">Use Cases</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link">Pricing</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </dialog>
 </body>
 </html>
