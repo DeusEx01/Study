@@ -36,6 +36,8 @@
 
   
   &__link {
+    --serviceCardLinkIconColor: var(--color-accent);
+
     display: inline-flex;
     align-items: center;
     column-gap: 15px;
@@ -43,6 +45,7 @@
     transition-duration: var(--transition-duration);
 
     &--light {
+      --serviceCardLinkIconColor: var(--color-dark);
       color: var(--color-light);
     }
 
@@ -73,12 +76,11 @@
       @include flex-center;
       @include square(41px);
 
-      background-color: var(--color-dark);
-      color: currentColor;
+      background-color: currentColor;
       border-radius: 50%;
 
       svg {
-        color: var(--color-accent);
+        color: var(--serviceCardLinkIconColor);
       }
     }
 

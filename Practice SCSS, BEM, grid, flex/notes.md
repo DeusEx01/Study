@@ -55,6 +55,7 @@ CSS-переменные подверженны всем принципам ка
   ```
 4. dialog тег для всплывающих элементов (меню)
 5. display: contents 60:08 https://www.youtube.com/shorts/CSegskzuGxk?feature=share
+6. margin-block and margin-inline
 
 
 ## Notes
