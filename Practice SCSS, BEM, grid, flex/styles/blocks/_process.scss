@@ -1,0 +1,15 @@
+.process {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__accordion {
+    padding: 40px 60px;
+    background: var(--color-gray);
+    border-radius: var(--border-radius-large);
+    border: var(--border);
+    box-shadow: var(--shadow);
+  }
+}

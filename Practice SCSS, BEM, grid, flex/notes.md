@@ -56,6 +56,9 @@ CSS-переменные подверженны всем принципам ка
 4. dialog тег для всплывающих элементов (меню)
 5. display: contents 60:08 https://www.youtube.com/shorts/CSegskzuGxk?feature=share
 6. margin-block and margin-inline
+7. scroll-type: x mandatory;
+      overflow-x: scroll;
+8. details and summary tags
 
 
 ## Notes

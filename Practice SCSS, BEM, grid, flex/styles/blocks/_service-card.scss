@@ -9,6 +9,12 @@
   background-color: var(--color-gray);
   box-shadow: var(--shadow);
 
+  @include mobile {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 27px;
+  }
+
   &--accent-bg {
     background-color: var(--color-accent);
   }
@@ -22,16 +28,33 @@
     flex-direction: column;
     justify-content: space-between;
     row-gap: 30px;
+
+    @include mobile {
+      display: contents;
+    }
   }
 
   &__title {
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    @include mobile {
+      grid-column: -1 / 1;
+    }
   }
 
   &__image {
     align-self: center;
+
+    @include desktop {
+      max-width: 50%;
+      height: auto;
+    }
+
+    @include mobile {
+      max-width: 165px;
+    }
   }
 
   
@@ -49,6 +72,10 @@
       color: var(--color-light);
     }
 
+    @include mobile {
+      align-self: end;
+    }
+
     &-label {
       position: relative;
 
@@ -62,6 +89,10 @@
         height: 2px;
         background-color: currentColor;
         transition-duration: var(--transition-duration);
+      }
+
+      @include mobile {
+        @include visually-hidden;
       }
     }
 
@@ -83,6 +114,7 @@
         color: var(--serviceCardLinkIconColor);
       }
     }
+
 
     
   }
