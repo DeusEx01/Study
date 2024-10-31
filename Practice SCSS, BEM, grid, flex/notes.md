@@ -59,6 +59,7 @@ CSS-переменные подверженны всем принципам ка
 7. scroll-type: x mandatory;
       overflow-x: scroll;
 8. details and summary tags
+9. counter-reset: custom-counter
 
 
 ## Notes
