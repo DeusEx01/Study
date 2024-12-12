@@ -5,6 +5,10 @@
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
 
+  @include mobile {
+    padding-inline: 50px;
+  }
+
   &__header {
     display: flex;
   }
@@ -24,12 +28,31 @@
   }
 
   &__link {
+    @include flex-center;
+    @include square(34px);
+
+    flex-shrink: 0;
     margin-left: auto;
     align-self: start;
+    color: var(--color-accent);
+    background-color: var(--color-dark);
+    border-radius: 50%;
   }
 
   &__name {
-
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
   }
 
+  &__body {
+    --teamCardBodyMarginTop: 28px;
+    padding-top: var(--teamCardBodyMarginTop);
+    margin-top: var(--teamCardBodyMarginTop);
+    border-top: var(--border);
+
+    @include mobile {
+      --teamCardBodyMarginTop: 20px;
+    }
+  }
 }
