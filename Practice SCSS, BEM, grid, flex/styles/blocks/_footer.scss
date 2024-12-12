@@ -77,4 +77,18 @@
       }
     }
   }
+
+  &__extra {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+  }
+
+  &__privacy-policy-link {
+    text-decoration: underline;
+    
+    @include hover  {
+      color: var(--color-accent);
+    }
+  }
 }

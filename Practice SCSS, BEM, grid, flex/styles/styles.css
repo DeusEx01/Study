@@ -285,6 +285,13 @@ h4, .h4 {
 .field--big--height {
   --fieldInputHeight: var(--button-height);
 }
+.field--dark--bg {
+  --fieldInputTextColor: var(--color-accent);
+  --fieldInputBgColor: var(--color-dark-alt);
+  --fieldInputBorderColor: var(--color-light);
+  --fieldInputPlaceholderColor: var(--color-light);
+  --fieldInputHoverBgColor: var(--color-dark);
+}
 .field__label {
   font-size: clamp(14px, 1.1111111111vw, 16px);
 }
@@ -407,6 +414,22 @@ h4, .h4 {
 .button--transparent {
   color: var(--color-dark);
   background-color: transparent;
+}
+.button--accent {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+@media (hover: hover) {
+  .button--accent:hover {
+    background-color: var(--color-dark);
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .button--accent:active {
+    background-color: var(--color-dark);
+    color: var(--color-accent);
+  }
 }
 
 .grid {
@@ -1569,11 +1592,18 @@ h4, .h4 {
 .subscribe-form {
   padding: 58px 40px;
   background-color: var(--color-dark-alt);
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius);
   display: flex;
   column-gap: 20px;
-  width: 100%;
-  max-width: 634px;
+}
+@media (max-width: 1280px) {
+  .subscribe-form {
+    flex-direction: column;
+    row-gap: 22px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+  }
 }
 
 .footer__inner {
@@ -1654,6 +1684,24 @@ h4, .h4 {
 }
 @media (hover: none) {
   .footer__contacts-body a:active {
+    color: var(--color-accent);
+  }
+}
+.footer__extra {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+}
+.footer__privacy-policy-link {
+  text-decoration: underline;
+}
+@media (hover: hover) {
+  .footer__privacy-policy-link:hover {
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .footer__privacy-policy-link:active {
     color: var(--color-accent);
   }
 }
